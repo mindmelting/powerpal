@@ -35,13 +35,9 @@ jobs:
       run: |
         pytest --exitfirst --verbose --failed-first \
         --cov=powerpal --cov-report html
-    - name: Build and publish
-      env:
-        TWINE_USERNAME: __token__
-        TWINE_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
+    - name: Build package
       run: |
         python setup.py sdist bdist_wheel
-        twine upload dist/*
     - name: Publish distribution 📦 to Test PyPI
       uses: pypa/gh-action-pypi-publish@master
       with:
