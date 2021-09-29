@@ -1,5 +1,5 @@
 import pytest
-from aiohttp import ClientSession, ClientResponseError, ServerTimeoutError
+from aiohttp import ClientSession, ServerTimeoutError
 
 from aioresponses import aioresponses
 
