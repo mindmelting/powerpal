@@ -5,6 +5,8 @@ from .exceptions import (
     PowerpalAuthenticationException
 )
 
+BASE_URL = "https://readings.powerpal.net"
+
 
 class Powerpal:
     def __init__(self, session: ClientSession, authKey: str, deviceId: str):
@@ -21,7 +23,7 @@ class Powerpal:
         }
         try:
             resp = await self._session.get(
-                f"https://readings.powerpal.net/api/v1/device/{self._deviceId}",
+                f"${BASE_URL}/api/v1/device/{self._deviceId}",
                 headers=headers,
                 raise_for_status=True
             )
