@@ -23,7 +23,7 @@ class Powerpal:
         }
         try:
             resp = await self._session.get(
-                f"${BASE_URL}/api/v1/device/{self._deviceId}",
+                f"{BASE_URL}/api/v1/device/{self._deviceId}",
                 headers=headers,
                 raise_for_status=True
             )
