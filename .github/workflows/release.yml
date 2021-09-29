@@ -4,8 +4,9 @@ on:
   pull_request:
     branches:
       - main
-  release:
-    types: [created]
+  push:
+    tags:
+      - '**' 
 
 jobs:
   deploy:
@@ -41,6 +42,7 @@ jobs:
     - name: Publish distribution 📦 to Test PyPI
       uses: pypa/gh-action-pypi-publish@master
       with:
+        skip_existing: true
         password: ${{ secrets.TEST_PYPI_API_TOKEN }}
         repository_url: https://test.pypi.org/legacy/
     - name: Publish distribution 📦 to PyPI
