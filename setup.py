@@ -7,6 +7,7 @@ setup(
     name="powerpal",
     version="0.1.0",
     author="Lawrence Hunt",
+    author_email="lawrence.hunt@gmail.com",
     url="https://github.com/mindmelting/powerpal",
     description="Python client for calling Powerpal API.",
     long_description=long_description,
