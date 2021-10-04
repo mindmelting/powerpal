@@ -5,11 +5,11 @@ with open("README.md", "r") as fh:
 
 setup(
     name="mindmelting.powerpal",
-    version="0.2.0",
+    version="0.2.1",
     author="Lawrence Hunt",
     author_email="lawrence.hunt@gmail.com",
     url="https://github.com/mindmelting/powerpal",
-    description="Python client for calling Powerpal API.",
+    description="Simple Python client for calling Powerpal Readings API.",
     long_description=long_description,
     long_description_content_type="text/markdown",
     packages=find_packages(exclude=["test"]),

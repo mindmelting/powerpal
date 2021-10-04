@@ -3,8 +3,8 @@ from aiohttp import ClientSession, ServerTimeoutError
 
 from aioresponses import aioresponses
 
-from powerpal import Powerpal
-from powerpal.exceptions import (
+from mindmelting.powerpal import Powerpal
+from mindmelting.powerpal.exceptions import (
     PowerpalException,
     PowerpalAuthorizationException,
     PowerpalAuthenticationException
