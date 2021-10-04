@@ -4,12 +4,12 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setup(
-    name="powerpal",
-    version="0.2.0",
+    name="mindmelting.powerpal",
+    version="0.3.0",
     author="Lawrence Hunt",
     author_email="lawrence.hunt@gmail.com",
     url="https://github.com/mindmelting/powerpal",
-    description="Python client for calling Powerpal API.",
+    description="Simple Python client for calling Powerpal Readings API.",
     long_description=long_description,
     long_description_content_type="text/markdown",
     packages=find_packages(exclude=["test"]),
