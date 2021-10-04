@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setup(
-    name="powerpal",
+    name="mindmelting.powerpal",
     version="0.2.0",
     author="Lawrence Hunt",
     author_email="lawrence.hunt@gmail.com",
