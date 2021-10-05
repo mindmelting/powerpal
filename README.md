@@ -1,8 +1,10 @@
 # powerpal
 
-_This repository and package is not affiliated with Powerpal_
+_This repository and package is not affiliated with Powerpal._
 
 Simple Python package for making calls to the Powerpal Readings API.
+
+Credit to [forfuncsake](https://github.com/forfuncsake) for the go client which this is influenced from: [https://github.com/forfuncsake/powerpal](https://github.com/forfuncsake/powerpal)
 
 ## Installation
 
