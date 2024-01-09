@@ -91,7 +91,7 @@ async def test_authorization_error():
     with aioresponses() as m:
         m.get(
             f'https://readings.powerpal.net/api/v1/device/{EXAMPLE_DEVICE_ID}',
-            status=403, body="Authorization Error")
+            status=403, body="Authentication Error")
 
         async with ClientSession() as session:
             powerpal = Powerpal(session, EXAMPLE_AUTH_STR, EXAMPLE_DEVICE_ID)
