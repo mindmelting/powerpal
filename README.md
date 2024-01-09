@@ -43,4 +43,18 @@ async def get_powerpal_data(self):
     except PowerpalException as exception:
         # All other exceptions
         ...
+
+async def get_powerpal_time_series_data(self):
+    try:
+        return await powerpal.get_time_series_data()
+    
+    except PowerpalAuthenticationException as exception:
+        # 401 - Authorization key is invalid
+        ...
+    except PowerpalAuthorizationException as exception:
+        # 403 - Device Id is invalid
+        ...
+    except PowerpalException as exception:
+        # All other exceptions
+        ...
 ```
