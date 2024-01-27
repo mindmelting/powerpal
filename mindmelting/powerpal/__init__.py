@@ -44,7 +44,12 @@ class Powerpal:
 
         return data
 
-    async def get_time_series_data(self, start: int = None, end: int = None, sample: int = None):
+    async def get_time_series_data(
+        self,
+        start: int = None,
+        end: int = None,
+        sample: int = None
+    ):
         def build_params():
             params = {}
             if start is not None:

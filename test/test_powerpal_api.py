@@ -45,6 +45,7 @@ EXAMPLE_TIME_SERIES_RESPONSE = [
     },
 ]
 
+BASE_URL = "https://readings.powerpal.net/api/v1"
 EXAMPLE_DEVICE_ID = "12345"
 EXAMPLE_AUTH_STR = "abcd"
 
@@ -52,7 +53,7 @@ EXAMPLE_AUTH_STR = "abcd"
 async def test_success():
     with aioresponses() as m:
         m.get(
-            f'https://readings.powerpal.net/api/v1/device/{EXAMPLE_DEVICE_ID}',
+            f'{BASE_URL}/device/{EXAMPLE_DEVICE_ID}',
             status=200, payload=EXAMPLE_RESPONSE)
 
         async with ClientSession() as session:
@@ -65,7 +66,7 @@ async def test_success():
 async def test_time_series_success():
     with aioresponses() as m:
         m.get(
-            f'https://readings.powerpal.net/api/v1/meter_reading/{EXAMPLE_DEVICE_ID}',
+            f'{BASE_URL}/meter_reading/{EXAMPLE_DEVICE_ID}',
             status=200, payload=EXAMPLE_TIME_SERIES_RESPONSE)
 
         async with ClientSession() as session:
@@ -78,7 +79,7 @@ async def test_time_series_success():
 async def test_authentication_error():
     with aioresponses() as m:
         m.get(
-            f'https://readings.powerpal.net/api/v1/device/{EXAMPLE_DEVICE_ID}',
+            f'{BASE_URL}/device/{EXAMPLE_DEVICE_ID}',
             status=401, body="Authentication Error")
 
         async with ClientSession() as session:
@@ -90,7 +91,7 @@ async def test_authentication_error():
 async def test_authorization_error():
     with aioresponses() as m:
         m.get(
-            f'https://readings.powerpal.net/api/v1/device/{EXAMPLE_DEVICE_ID}',
+            f'{BASE_URL}/device/{EXAMPLE_DEVICE_ID}',
             status=403, body="Authorization Error")
 
         async with ClientSession() as session:
@@ -102,7 +103,7 @@ async def test_authorization_error():
 async def test_server_error():
     with aioresponses() as m:
         m.get(
-            f'https://readings.powerpal.net/api/v1/device/{EXAMPLE_DEVICE_ID}',
+            f'{BASE_URL}/device/{EXAMPLE_DEVICE_ID}',
             status=500, body="Server Error")
 
         async with ClientSession() as session:
@@ -114,7 +115,7 @@ async def test_server_error():
 async def test_timeout_error():
     with aioresponses() as m:
         m.get(
-            f'https://readings.powerpal.net/api/v1/device/{EXAMPLE_DEVICE_ID}',
+            f'{BASE_URL}/device/{EXAMPLE_DEVICE_ID}',
             exception=ServerTimeoutError())
 
         async with ClientSession() as session:
