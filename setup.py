@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name="mindmelting.powerpal",
-    version="0.3.0",
+    version="0.4.0",
     author="Lawrence Hunt",
     author_email="lawrence.hunt@gmail.com",
     url="https://github.com/mindmelting/powerpal",
